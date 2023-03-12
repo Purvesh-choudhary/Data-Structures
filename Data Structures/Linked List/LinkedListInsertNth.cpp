@@ -36,7 +36,28 @@ void InsertAtEnd(int Data)
 
 void InsertAtMid(int Data, int add)
 {
+    cout<<"CHAOLO";
 
+
+
+
+    Node *temp = new Node();
+    Node *ptr = head;
+    temp->data = Data;
+
+    for (int i = 2; i < add; i++)
+    {  
+        if(ptr->next != NULL){
+            ptr = ptr->next;
+        }
+    } 
+    temp->next = ptr->next;
+    ptr->next = temp;
+
+
+
+
+    cout<<"BOLO";
 }
 void Print()
 {
