@@ -1,0 +1,4 @@
+oid Insert(int x)
+// {
+
+// }
