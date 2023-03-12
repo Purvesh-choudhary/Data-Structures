@@ -1,6 +1,8 @@
 // Online C compiler to run C program online
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+using namespace std;
 
 struct Node{
     int data;
@@ -26,9 +28,15 @@ void Print(){
 }
 int main() {
     head = NULL;
-    printf("Start - \n");
-    Insert(1);
-    Insert(3);
-    Print();
+    cout<<"How many no. ? ";
+    int n,x;
+    cin>>n;
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>x;
+        Insert(x);
+        Print();
+    }
     return 0;
 }
