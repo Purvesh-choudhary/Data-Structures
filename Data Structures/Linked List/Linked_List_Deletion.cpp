@@ -82,6 +82,7 @@ int main()
     cin>>d_no;
 
     Delete(d_no);
+    cout<<"Item Deleted";
     Print();
 
     cout<<"END OF THE PROGRAM";
