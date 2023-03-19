@@ -36,11 +36,6 @@ void InsertAtEnd(int Data)
 
 void InsertAtMid(int Data, int add)
 {
-    cout<<"CHAOLO";
-
-
-
-
     Node *temp = new Node();
     Node *ptr = head;
     temp->data = Data;
@@ -53,11 +48,6 @@ void InsertAtMid(int Data, int add)
     } 
     temp->next = ptr->next;
     ptr->next = temp;
-
-
-
-
-    cout<<"BOLO";
 }
 void Print()
 {
@@ -103,41 +93,41 @@ int main()
     cout<<"l2 = "<<l2<<endl;
     cout<<"l3 = "<<l3<<endl;
 
-
     cout<<"Linked List is - "<<l1->data<<" -> "<<l2->data<<" -> "<<l3->data<<endl;
     
-    again:
-    cout<<"\nInsert at 1.Begin   2.Mid   3.End   4.Quit  |  Choice - ";
-    cin>>x;
-
-    switch (x)
+    do
     {
-    case 1 :    cout<<"Enter no. - ";
-                cin>>no;
-                InsertAtBegin(no);
-                Print();
-                PrintAdd();
-                break;
-    case 2 :    cout<<"Enter no. - ";
-                cin>>no;
-                cout<<"Enter add - ";
-                cin>>add;
-                InsertAtMid(no,add);
-                Print();
-                PrintAdd();
-                break;            
-    case 3 :    cout<<"Enter no. - ";
-                cin>>no;
-                InsertAtEnd(no);
-                Print();
-                PrintAdd();
-                break;
-    case 4 :    return 0;    
-    
-    default:    cout<<"Wrong Choise - Try Again";       
-                break;
-    }
-    goto again;
+        cout<<"\nInsert at 1.Begin   2.Mid   3.End   4.Quit  |  Choice - ";
+        cin>>x;
+
+        switch (x)
+        {
+        case 1 :    cout<<"Enter no. - ";
+                    cin>>no;
+                    InsertAtBegin(no);
+                    Print();
+                    PrintAdd();
+                    break;
+        case 2 :    cout<<"Enter no. - ";
+                    cin>>no;
+                    cout<<"Enter add - ";
+                    cin>>add;
+                    InsertAtMid(no,add);
+                    Print();
+                    PrintAdd();
+                    break;            
+        case 3 :    cout<<"Enter no. - ";
+                    cin>>no;
+                    InsertAtEnd(no);
+                    Print();
+                    PrintAdd();
+                    break;
+        case 4 :    break;    
+        
+        default:    cout<<"Wrong Choise - Try Again";                  
+                    break;
+        } 
+    }while(x!=4);
 
     cout<<"END OF THE PROGRAM";
     return 0;
