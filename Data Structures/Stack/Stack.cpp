@@ -26,4 +26,5 @@ int main()
     push(12);
     display();
     return 0;
+    
 }
