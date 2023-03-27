@@ -17,11 +17,8 @@ void push(int data)
 void display()
 {
     for(int i =4; i>=0; i++)
-    {
         cout<<i<<"="<<stack[i]<<endl;
-    }
 }
-
 
 int main()
 {
