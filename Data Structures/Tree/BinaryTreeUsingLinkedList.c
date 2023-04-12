@@ -46,10 +46,11 @@ void delete(struct node * root){
     if(root!=NULL){
         preorder(root->left);
         preorder(root->right);
-    }
-    printf("\nDeleted : %d",root->data);
-    free(root);
+        printf("\nDeleted : %d",root->data);
+        free(root);
+    }        
 }
+    
 
 int main(){
 
@@ -71,13 +72,6 @@ int main(){
     inorder(root);
 
     delete(root->right->left);
-
-    printf("\nPre-order  : ");
-    preorder(root);
-    printf("\nPost-order : ");
-    postorder(root);
-    printf("\nIn-order   : ");
-    inorder(root);
 
     return 0;
 }
