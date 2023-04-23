@@ -38,6 +38,22 @@ void displayBackward(Node* Foot)
     }
 }
 
+void Addnew_at_Head(int data, Node* Head){
+    Node *newNode , *temp;
+    
+    cout<<"\nAdded 1 : "<<Head->data;
+    newNode = new Node();
+
+    newNode->data = data;
+    newNode->prev = NULL;
+    newNode->next = Head;
+
+    Head->prev = newNode;
+    Head = newNode;
+
+    cout<<"\nAdded 2 : "<<Head->data;
+}
+
 int main()
 {
     Node* l[max]; //create node
@@ -49,8 +65,7 @@ int main()
     
     cout<<"\nData -\n";
 
-
-    for(int i=0; i<max; i++){  // data inserted and displayForward
+    for(int i=0; i<max; i++){  // data inserted and display
         l[i]->data = i+10;
         cout<<l[i]->data;
         if(i!= 4)
@@ -78,7 +93,10 @@ int main()
     displayForward(Head);
     displayBackward(Foot);
 
-
+    Addnew_at_Head(5,Head);
+    cout<<"\nAdded 3 : "<<Head->data;
+    //displayForward(Head);
+    displayBackward(Foot);
     cout<<"\n\nProgram Ended !"<<endl;
 
     return 0;
